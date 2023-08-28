@@ -1,3 +1,4 @@
+
 package demo;
 
 import java.util.concurrent.TimeUnit;
@@ -11,11 +12,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 ///
 
-
 public class TestCases {
     ChromeDriver driver;
-    public TestCases()
-    {
+
+    public TestCases() {
         System.out.println("Constructor: TestCases");
         WebDriverManager.chromedriver().timeout(30).setup();
         driver = new ChromeDriver();
@@ -24,20 +24,17 @@ public class TestCases {
 
     }
 
-    public void endTest()
-    {
+    public void endTest() {
         System.out.println("End Test: TestCases");
         driver.close();
         driver.quit();
 
     }
 
-    
-    public  void testCase01(){
+    public void testCase01() {
         System.out.println("Start Test case: testCase01");
         driver.get("https://www.google.com");
         System.out.println("end Test case: testCase02");
     }
-
 
 }
